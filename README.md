@@ -1,19 +1,23 @@
 # SignaturePad
-Stellt eine Implementierung eines Feldes zum Unterschreiben innerhalb von Blazor-Anwendungen bereit. 
+A simple to use blazor component to draw a signature.
+
+![SignaturePad Demo](images/demo.png)
 
 ## Installation
-Zur Verwendung dieses Packages muss es lediglich über NuGet installiert werden. 
 
-In __Imports.razor_ muss folgende Using-Anweisung hinzugefügt werden
+You can install from Nuget using the following command:
+
+`Install-Package Blazor.SignaturePad`
+
+Or via the Visual Studio package manger.
+
+## Basic usage
+Start by add the following using statement to your root `_Imports.razor`.
 
     @using SignaturePad
 
-
-## Verwendung
-Ein Signaturepad kann relativ leicht eingebunden werden
+You can then use it wherever you want. 
 
     <SignaturePad @bind-Value="Input.MyValue" />
 
-Der Wert von `MyValue` entspricht hierbei ein `byte[]`
-
-Die maximale Größe der Bilddatei beträgt 10MB.
+The control provides you the image data as `byte[]`

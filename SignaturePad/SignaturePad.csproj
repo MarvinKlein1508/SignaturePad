@@ -5,13 +5,14 @@
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<VersionPrefix>7.0.0.0</VersionPrefix>
-		<Description>Eine Implementierung eines Unterschriftfeldes für Blazor Anwendungen.</Description>
+		<Description>A simple to use blazor component to draw a signature.</Description>
 		<Copyright>2022</Copyright>
 		<RepositoryUrl>http://git.webapp.scholzdom.local:6112/mk/signaturepad</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>unterschrift, signature</PackageTags>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>SignaturePad</Title>
+		<PackageId>Blazor.$(AssemblyName)</PackageId>
 	</PropertyGroup>
 
 
