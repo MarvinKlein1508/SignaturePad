@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<VersionPrefix>7.0.0.0</VersionPrefix>
+		<Description>Eine Implementierung eines Unterschriftfeldes für Blazor Anwendungen.</Description>
+		<Copyright>2022</Copyright>
+		<RepositoryUrl>http://git.webapp.scholzdom.local:6112/mk/signaturepad</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>unterschrift, signature</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<Title>SignaturePad</Title>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<SupportedPlatform Include="browser" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.0" />
+	</ItemGroup>
+
+</Project>
