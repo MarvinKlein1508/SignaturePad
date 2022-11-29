@@ -1,5 +1,5 @@
 # SignaturePad
-A simple to use blazor component to draw a signature. It supports both mouse and touch inputs and works on Blazor Server.
+A simple to use blazor component to draw a signature. It supports both mouse and touch inputs and works on Blazor Server and Blazor WebAssembly.
 
 ![SignaturePad Demo](images/demo.png)
 
