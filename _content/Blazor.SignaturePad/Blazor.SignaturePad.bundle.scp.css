@@ -1,0 +1,12 @@
+/* _content/Blazor.SignaturePad/SignaturePad.razor.rz.scp.css */
+#sig-canvas[b-168tik2540] {
+    border: 2px dotted #CCCCCC;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+.signature[b-168tik2540] {
+    border: 2px dotted #CCCCCC;
+    border-radius: 15px;
+    cursor: crosshair;
+}
