@@ -18,8 +18,27 @@ Start by add the following using statement to your root `_Imports.razor`.
 
     @using SignaturePad
 
-You can then use it wherever you want. 
+Next you should define add a property to your class. For example:
+```csharp
+public class MyInput
+{
+    public byte[] Signature { get; set; } = Array.Empty<byte>();
+}
+```
 
-    <SignaturePad @bind-Value="Input.MyValue" />
+You can then use it wherever you want. `
+```
+    <SignaturePad @bind-Value="Input.Signature" />
+```
 
-The control provides you the image data as `byte[]`
+The control provides you the image data as base64 `byte[]`
+
+To get the image, you'll need to convert to `byte[]` into a string. For example:
+
+```csharp
+public class MyInput
+{
+    public byte[] Signature { get; set; }
+    public string SignatureAsBase64 => System.Text.Encoding.UTF8.GetString(Signature);
+}
+```
