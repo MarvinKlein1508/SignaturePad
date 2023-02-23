@@ -1,3 +1,4 @@
+using BlazorServerTests.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
@@ -12,6 +13,7 @@ namespace BlazorServerTests
             // Add services to the container.
             builder.Services.AddRazorPages();
             builder.Services.AddServerSideBlazor();
+            builder.Services.AddSingleton<SignatureInMemoryService>();
 
 
             var app = builder.Build();
