@@ -2,23 +2,36 @@ using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 using System.Text;
 
+
 namespace SignaturePad
 {
     public partial class SignaturePad
     {
-        [Parameter] public byte[] Value { get; set; } = Array.Empty<byte>();
-        [Parameter] public EventCallback<byte[]> ValueChanged { get; set; }
+        [Parameter]
+        public byte[] Value
+        {
+            get => _value;
+            set
+            {
+                if(value == _value) return;
+
+                _value = value;
+                UpdateImage();
+            }
+        }
+        [Parameter]
+        public EventCallback<byte[]> ValueChanged { get; set; }
         [Parameter] public SignaturePadOptions Options { get; set; } = new SignaturePadOptions();
 
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;
         private IJSObjectReference? jsModule;
         private bool _rendered = false;
-
+        private byte[] _value = Array.Empty<byte>();
 
         public SignaturePad()
         {
-            _reference = DotNetObjectReference.Create<SignaturePad>(this);
+            _reference = DotNetObjectReference.Create(this);
         }
 
         [JSInvokable]
@@ -31,8 +44,6 @@ namespace SignaturePad
 
             string base64 = Encoding.UTF8.GetString(memoryStream.ToArray());
 
-
-            base64 = base64.Replace("data:image/png;base64,", string.Empty);
             try
             {
                 Value = Convert.FromBase64String(base64);
@@ -69,7 +80,7 @@ namespace SignaturePad
 
         private string ByteToData(byte[] data)
         {
-            return $"data:image/png;base64,{Convert.ToBase64String(data)}";
+            return $"{Encoding.UTF8.GetString(data)}";
         }
 
         private async Task Setup()
