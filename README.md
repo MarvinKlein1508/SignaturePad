@@ -18,7 +18,7 @@ Start by add the following using statement to your root `_Imports.razor`.
 
     @using SignaturePad
 
-Next you should define add a property to your class. For example:
+Next you should define a property in your class. For example:
 ```csharp
 public class MyInput
 {
@@ -26,7 +26,7 @@ public class MyInput
 }
 ```
 
-You can then use it wherever you want. `
+You can then use it wherever you want.
 ```
     <SignaturePad @bind-Value="Input.Signature" />
 ```
