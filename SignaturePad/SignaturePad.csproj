@@ -4,7 +4,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Version>7.0.2</Version>
+		<Version>7.0.3</Version>
 		<Description>A simple to use blazor component to draw a signature.</Description>
 		<Copyright>2023</Copyright>
 		<RepositoryUrl>https://github.com/MarvinKlein1508/SignaturePad</RepositoryUrl>
