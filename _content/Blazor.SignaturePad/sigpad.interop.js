@@ -22,7 +22,7 @@ export function destroy(id) {
     }
 }
 
-export function update(id,options) {
+export function update(id, options) {
     var identifier = "signature-" + id;
     var element = document.getElementById(identifier);
 
@@ -37,7 +37,7 @@ export function updateImage(id, image) {
 
     var sigpad = Sigpad.getInstance(element);
     if (sigpad != null) {
-        sigpad.setImage(image);        
+        sigpad.setImage(image);
     }
 }
 export function clear(id) {
@@ -55,16 +55,16 @@ export function getBase64(id) {
     var element = document.getElementById(identifier);
 
     var sigpad = Sigpad.getInstance(element);
-    
+
     var base64 = sigpad.getImage();
 
 
-    var binary_string = window.btoa(unescape(encodeURIComponent(base64)))
+    var binary_string = window.btoa(base64)
     var len = binary_string.length;
     var bytes = new Uint8Array(len);
     for (var i = 0; i < len; i++) {
         bytes[i] = binary_string.charCodeAt(i);
     }
     return bytes.buffer;
-  
+
 }
