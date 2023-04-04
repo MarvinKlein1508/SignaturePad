@@ -4,5 +4,8 @@
     Get a better browser, bro.
 </canvas>
 
-<button type="button" class="btn btn-default" @onclick="Clear">Clear Signature</button>
+@if (ShowClearButton)
+{
+    <button type="button" class="btn btn-default" @onclick="Clear">@ClearButtonText</button>
+}
 

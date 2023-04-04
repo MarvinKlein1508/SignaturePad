@@ -7,9 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignaturePad", "SignaturePa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{000FCF47-F117-41E4-898F-CC266BD36B27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorServerTests", "BlazorServerTests\BlazorServerTests.csproj", "{3DB3FAFF-8239-4702-943D-231DDED8C8C0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorServerTests", "BlazorServerTests\BlazorServerTests.csproj", "{3DB3FAFF-8239-4702-943D-231DDED8C8C0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebassemblyTests", "BlazorWebassemblyTests\BlazorWebassemblyTests.csproj", "{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebassemblyTests", "BlazorWebassemblyTests\BlazorWebassemblyTests.csproj", "{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ressources", "Ressources", "{EC86F410-B4E3-4189-8661-F0F50C6B5FC2}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

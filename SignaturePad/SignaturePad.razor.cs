@@ -21,7 +21,13 @@ namespace SignaturePad
         }
         [Parameter]
         public EventCallback<byte[]> ValueChanged { get; set; }
-        [Parameter] public SignaturePadOptions Options { get; set; } = new SignaturePadOptions();
+        [Parameter] 
+        public SignaturePadOptions Options { get; set; } = new SignaturePadOptions();
+
+        [Parameter] 
+        public bool ShowClearButton { get; set; } = true;
+        [Parameter]
+        public string ClearButtonText { get; set; } = "Clear Signature";
 
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;

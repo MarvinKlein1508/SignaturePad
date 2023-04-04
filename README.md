@@ -14,9 +14,10 @@ You can install from Nuget using the following command:
 Or via the Visual Studio package manger.
 
 ## Basic usage
-Start by add the following using statement to your root `_Imports.razor`.
-
+Start by adding the following using statement to your root `_Imports.razor`.
+```
     @using SignaturePad
+```
 
 Next you should define a property in your class. For example:
 ```csharp
