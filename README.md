@@ -43,3 +43,21 @@ public class MyInput
     public string SignatureAsBase64 => System.Text.Encoding.UTF8.GetString(Signature);
 }
 ```
+
+## Providing options
+You can configure the SignaturePad by providing a `SignaturePadOptions` instance to the component. 
+
+```csharp
+<SignaturePad @bind-Value="Input.Signature" Options="_options" />
+
+@code {
+    public MyInput Input { get; set; } = new();
+
+    private SignaturePadOptions _options = new SignaturePadOptions
+    {
+        LineCap = LineCap.Round,
+        LineJoin = LineJoin.Round,
+        LineWidth = 20
+    };
+}
+```
