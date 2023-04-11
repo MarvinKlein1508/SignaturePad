@@ -10,10 +10,24 @@
 		<RepositoryUrl>https://github.com/MarvinKlein1508/SignaturePad</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>unterschrift, signature</PackageTags>
+		<Authors>Marvin Klein</Authors>
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<Title>SignaturePad</Title>
 		<PackageId>Blazor.$(AssemblyName)</PackageId>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Include="D:\Programmierung\SignaturePad\LICENSE">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	  <None Include="D:\Programmierung\SignaturePad\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
 
 
 	<ItemGroup>
