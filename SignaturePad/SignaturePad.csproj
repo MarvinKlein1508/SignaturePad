@@ -19,11 +19,11 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Include="D:\Programmierung\SignaturePad\LICENSE">
+	  <None Include="..\LICENSE">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
-	  <None Include="D:\Programmierung\SignaturePad\README.md">
+	  <None Include="..\README.md">
 	    <Pack>True</Pack>
 	    <PackagePath>\</PackagePath>
 	  </None>
