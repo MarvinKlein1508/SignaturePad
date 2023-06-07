@@ -16,7 +16,11 @@ export function setup(id, reference, options, image) {
 
 screen.orientation.onchange = function () {
     dotNetHelper.invokeMethodAsync('UpdateImage');
-};
+}
+
+window.onresize = function () {
+    dotNetHelper.invokeMethodAsync('UpdateImage');
+}
 
 export function destroy(id) {
     var identifier = "signature-" + id;
