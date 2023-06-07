@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "BlazorWebassemblyTests.dll": "sha256-5WT2yB5K4j8L+yPtikEqc\/HiAew4uSyiKvo3pYbQY+8=",
+      "BlazorWebassemblyTests.dll": "sha256-l9sSsbmbDElKxuSo8Lx3cCygQVm64j8tGBOQJoexb4E=",
       "Microsoft.AspNetCore.Components.dll": "sha256-cGyS+fIVi4TURNWMMDLMCmause8PFEg5DpGY9gfbaoo=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-Usux01ajj7\/i3D\/ZBYj3PCU2jBjfvf+2B0HYg6gUFlA=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-MgGbp+IsuuQoUlq3oPaHuY\/5RflbLVooMZ9BIvXiXf4=",
@@ -23,7 +23,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-QRewYnpJ6vl8gGMXBS2gN++\/sQ9hKcuv+rhy586Bbxs=",
       "Microsoft.JSInterop.dll": "sha256-rySlWhtshEKnJRV0rjEUB7mEHqT8yNm0ocdlA+VyE70=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-P\/aA0F4pkO1ASW2eKv8uwrcDL16qB90zC93nhd6kXUo=",
-      "SignaturePad.dll": "sha256-v4gP2fjs+Hj6p6JMRizcddB6gBXq\/0Cbr5vdQKXGasg=",
+      "SignaturePad.dll": "sha256-BQ+SLu8N5Gi8\/sK8uikIj7AhADxA1+Pq45iHsvYScKU=",
       "System.Collections.Concurrent.dll": "sha256-t7czdP2rN3VdNalSdHnvsk0Dt3AfaAouxgUEncLjNZ4=",
       "System.Collections.dll": "sha256-w\/hDsr3rjFagT67vNEH46N7Qn3npYxrWbKzKnqm0fe0=",
       "System.ComponentModel.dll": "sha256-fEbIyi+GOj\/xghaOcdUriigSIwifc\/khw5NpL6IA8Fw=",
