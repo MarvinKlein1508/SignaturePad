@@ -105,7 +105,8 @@ namespace SignaturePad
             }
         }
 
-        private async Task UpdateImage()
+        [JSInvokable]
+        public async Task UpdateImage()
         {
             if (jsModule is not null)
             {
