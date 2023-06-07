@@ -1,6 +1,8 @@
 ﻿import Sigpad from "./sigpad.min.js"
+var dotNetHelper;
 
 export function setup(id, reference, options, image) {
+    dotNetHelper = reference;
     var identifier = "signature-" + id;
     var element = document.getElementById(identifier);
 
@@ -10,6 +12,14 @@ export function setup(id, reference, options, image) {
 
     var sigpad = Sigpad.getOrCreateInstance(element, JSON.parse(options));
     sigpad.setImage(image);
+}
+
+screen.orientation.onchange = function () {
+    dotNetHelper.invokeMethodAsync('UpdateImage');
+}
+
+window.onresize = function () {
+    dotNetHelper.invokeMethodAsync('UpdateImage');
 }
 
 export function destroy(id) {
