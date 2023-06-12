@@ -1,4 +1,4 @@
-﻿namespace BlazorWebassemblyTests.Services
+﻿namespace BlazorWebassemblyDemo.Services
 {
     public class SignatureInMemoryService
     {

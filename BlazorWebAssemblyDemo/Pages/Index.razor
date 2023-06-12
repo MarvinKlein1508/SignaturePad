@@ -1,9 +1,9 @@
 ﻿@page "/"
 @inject SignatureInMemoryService memoryService
 @inject NavigationManager navigationManager
-<PageTitle>Index</PageTitle>
+<PageTitle>SignaturePad Demo</PageTitle>
 
-<h1>SignaturePad Blazor WebAssembly Demo</h1>
+<h1>SignaturePad BlazorWebAssembly Demo</h1>
 <SignaturePad @bind-Value="Input.Signature" />
 
 @if (Input.Signature.Any())

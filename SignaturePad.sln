@@ -17,6 +17,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ressources", "Ressources", 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWebAssemblyDemo", "BlazorWebAssemblyDemo\BlazorWebAssemblyDemo.csproj", "{710F97B1-7B67-48D8-A960-22C1F3FF4325}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{710F97B1-7B67-48D8-A960-22C1F3FF4325}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{710F97B1-7B67-48D8-A960-22C1F3FF4325}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{710F97B1-7B67-48D8-A960-22C1F3FF4325}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{710F97B1-7B67-48D8-A960-22C1F3FF4325}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -42,6 +48,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{3DB3FAFF-8239-4702-943D-231DDED8C8C0} = {000FCF47-F117-41E4-898F-CC266BD36B27}
 		{BC25E016-FC2E-4A2C-A89E-C267DCC17C5A} = {000FCF47-F117-41E4-898F-CC266BD36B27}
+		{710F97B1-7B67-48D8-A960-22C1F3FF4325} = {000FCF47-F117-41E4-898F-CC266BD36B27}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C9360116-0238-47A9-B868-6C5E1B4A00F8}
