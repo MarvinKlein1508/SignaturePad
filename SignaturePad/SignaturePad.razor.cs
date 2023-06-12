@@ -28,6 +28,8 @@ namespace SignaturePad
         public bool ShowClearButton { get; set; } = true;
         [Parameter]
         public string ClearButtonText { get; set; } = "Clear Signature";
+        [Parameter]
+        public bool Disabled { get; set; }
 
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;
