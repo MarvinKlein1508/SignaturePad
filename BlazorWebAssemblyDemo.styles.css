@@ -1,21 +1,21 @@
 @import '_content/Blazor.SignaturePad/Blazor.SignaturePad.bundle.scp.css';
 
 /* /Shared/MainLayout.razor.rz.scp.css */
-.page[b-zbsw4ghuca] {
+.page[b-4dorp3x3xe] {
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-main[b-zbsw4ghuca] {
+main[b-4dorp3x3xe] {
     flex: 1;
 }
 
-.sidebar[b-zbsw4ghuca] {
+.sidebar[b-4dorp3x3xe] {
     background-image: linear-gradient(180deg, rgb(5, 39, 103) 0%, #3a0647 70%);
 }
 
-.top-row[b-zbsw4ghuca] {
+.top-row[b-4dorp3x3xe] {
     background-color: #f7f7f7;
     border-bottom: 1px solid #d6d5d5;
     justify-content: flex-end;
@@ -24,99 +24,99 @@ main[b-zbsw4ghuca] {
     align-items: center;
 }
 
-    .top-row[b-zbsw4ghuca]  a, .top-row[b-zbsw4ghuca]  .btn-link {
+    .top-row[b-4dorp3x3xe]  a, .top-row[b-4dorp3x3xe]  .btn-link {
         white-space: nowrap;
         margin-left: 1.5rem;
         text-decoration: none;
     }
 
-    .top-row[b-zbsw4ghuca]  a:hover, .top-row[b-zbsw4ghuca]  .btn-link:hover {
+    .top-row[b-4dorp3x3xe]  a:hover, .top-row[b-4dorp3x3xe]  .btn-link:hover {
         text-decoration: underline;
     }
 
-    .top-row[b-zbsw4ghuca]  a:first-child {
+    .top-row[b-4dorp3x3xe]  a:first-child {
         overflow: hidden;
         text-overflow: ellipsis;
     }
 
 @media (max-width: 640.98px) {
-    .top-row:not(.auth)[b-zbsw4ghuca] {
+    .top-row:not(.auth)[b-4dorp3x3xe] {
         display: none;
     }
 
-    .top-row.auth[b-zbsw4ghuca] {
+    .top-row.auth[b-4dorp3x3xe] {
         justify-content: space-between;
     }
 
-    .top-row[b-zbsw4ghuca]  a, .top-row[b-zbsw4ghuca]  .btn-link {
+    .top-row[b-4dorp3x3xe]  a, .top-row[b-4dorp3x3xe]  .btn-link {
         margin-left: 0;
     }
 }
 
 @media (min-width: 641px) {
-    .page[b-zbsw4ghuca] {
+    .page[b-4dorp3x3xe] {
         flex-direction: row;
     }
 
-    .sidebar[b-zbsw4ghuca] {
+    .sidebar[b-4dorp3x3xe] {
         width: 250px;
         height: 100vh;
         position: sticky;
         top: 0;
     }
 
-    .top-row[b-zbsw4ghuca] {
+    .top-row[b-4dorp3x3xe] {
         position: sticky;
         top: 0;
         z-index: 1;
     }
 
-    .top-row.auth[b-zbsw4ghuca]  a:first-child {
+    .top-row.auth[b-4dorp3x3xe]  a:first-child {
         flex: 1;
         text-align: right;
         width: 0;
     }
 
-    .top-row[b-zbsw4ghuca], article[b-zbsw4ghuca] {
+    .top-row[b-4dorp3x3xe], article[b-4dorp3x3xe] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
-.navbar-toggler[b-2nuvt5dmj0] {
+.navbar-toggler[b-caqql5fv4q] {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-.top-row[b-2nuvt5dmj0] {
+.top-row[b-caqql5fv4q] {
     height: 3.5rem;
     background-color: rgba(0,0,0,0.4);
 }
 
-.navbar-brand[b-2nuvt5dmj0] {
+.navbar-brand[b-caqql5fv4q] {
     font-size: 1.1rem;
 }
 
-.oi[b-2nuvt5dmj0] {
+.oi[b-caqql5fv4q] {
     width: 2rem;
     font-size: 1.1rem;
     vertical-align: text-top;
     top: -2px;
 }
 
-.nav-item[b-2nuvt5dmj0] {
+.nav-item[b-caqql5fv4q] {
     font-size: 0.9rem;
     padding-bottom: 0.5rem;
 }
 
-    .nav-item:first-of-type[b-2nuvt5dmj0] {
+    .nav-item:first-of-type[b-caqql5fv4q] {
         padding-top: 1rem;
     }
 
-    .nav-item:last-of-type[b-2nuvt5dmj0] {
+    .nav-item:last-of-type[b-caqql5fv4q] {
         padding-bottom: 1rem;
     }
 
-    .nav-item[b-2nuvt5dmj0]  a {
+    .nav-item[b-caqql5fv4q]  a {
         color: #d7d7d7;
         border-radius: 4px;
         height: 3rem;
@@ -125,27 +125,27 @@ main[b-zbsw4ghuca] {
         line-height: 3rem;
     }
 
-.nav-item[b-2nuvt5dmj0]  a.active {
+.nav-item[b-caqql5fv4q]  a.active {
     background-color: rgba(255,255,255,0.25);
     color: white;
 }
 
-.nav-item[b-2nuvt5dmj0]  a:hover {
+.nav-item[b-caqql5fv4q]  a:hover {
     background-color: rgba(255,255,255,0.1);
     color: white;
 }
 
 @media (min-width: 641px) {
-    .navbar-toggler[b-2nuvt5dmj0] {
+    .navbar-toggler[b-caqql5fv4q] {
         display: none;
     }
 
-    .collapse[b-2nuvt5dmj0] {
+    .collapse[b-caqql5fv4q] {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
     
-    .nav-scrollable[b-2nuvt5dmj0] {
+    .nav-scrollable[b-caqql5fv4q] {
         /* Allow sidebar to scroll for tall menus */
         height: calc(100vh - 3.5rem);
         overflow-y: auto;
