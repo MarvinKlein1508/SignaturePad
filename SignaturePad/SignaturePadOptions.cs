@@ -11,6 +11,8 @@ namespace SignaturePad
         public LineCap LineCap { get; set; } = LineCap.Butt;
         public LineJoin LineJoin { get; set; } = LineJoin.Miter;
 
+        public string? BackgroundColor { get; set; }
+
         public string ToJSON()
         {
             dynamic json = new ExpandoObject();
@@ -18,6 +20,8 @@ namespace SignaturePad
             json.strokeStyle = $"#{StrokeStyle.R.ToString("X2")}{StrokeStyle.G.ToString("X2")}{StrokeStyle.B.ToString("X2")}";
             json.lineCap = LineCap.ToString().ToLower();
             json.lineJoin = LineJoin.ToString().ToLower();
+            json.backgroundColor = BackgroundColor;
+            
 
             return JsonSerializer.Serialize(json);
         }
