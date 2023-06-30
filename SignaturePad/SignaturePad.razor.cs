@@ -27,6 +27,10 @@ namespace SignaturePad
         [Parameter] 
         public bool ShowClearButton { get; set; } = true;
         [Parameter]
+        public string ClearButtonClass { get; set; } = "btn btn-default";
+        [Parameter]
+        public string Class { get; set; } = "signature";
+        [Parameter]
         public string ClearButtonText { get; set; } = "Clear Signature";
         [Parameter]
         public bool Disabled { get; set; }

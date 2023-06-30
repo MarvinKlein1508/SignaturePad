@@ -16,7 +16,7 @@ Or via the Visual Studio package manger.
 ## Basic usage
 Start by adding the following using statement to your root `_Imports.razor`.
 ```
-    @using SignaturePad
+@using SignaturePad
 ```
 
 Next you should define a property in your class. For example:
@@ -61,3 +61,9 @@ You can configure the SignaturePad by providing a `SignaturePadOptions` instance
     };
 }
 ```
+
+## Custom styling
+You can customize the looks of SignaturePad by either overriding the CSS classes or by specifiying your own classes.
+
+For the SignaturePad itself you can use the `Class` parameter and for the button to clear the SignaturePad you can use the `ClearButtonClass` parameter.
+

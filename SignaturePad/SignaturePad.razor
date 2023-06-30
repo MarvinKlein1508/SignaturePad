@@ -1,11 +1,11 @@
 ﻿@inject Microsoft.JSInterop.IJSRuntime jsRuntime
 
-<canvas class="signature @(Disabled ? "disabled" : string.Empty)" id="signature-@_id" style="width: 100%;">
+<canvas class="@Class @(Disabled ? "disabled" : string.Empty)" id="signature-@_id" style="width: 100%;">
     Get a better browser, bro.
 </canvas>
 
 @if (ShowClearButton && !Disabled)
 {
-    <button type="button" class="btn btn-default" @onclick="Clear">@ClearButtonText</button>
+    <button type="button" class="@ClearButtonClass" @onclick="Clear">@ClearButtonText</button>
 }
 
