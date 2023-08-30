@@ -14,8 +14,15 @@ export function setup(id, reference, options, image) {
     sigpad.setImage(image);
 }
 
-screen.orientation.onchange = function () {
-    dotNetHelper.invokeMethodAsync('UpdateImage');
+if (screen.orientation != null) {
+    screen.orientation.onchange = function () {
+        dotNetHelper.invokeMethodAsync('UpdateImage');
+    }
+}
+else {
+    window.onorientationchange = function () {
+        dotNetHelper.invokeMethodAsync('UpdateImage');
+    }
 }
 
 window.onresize = function () {
