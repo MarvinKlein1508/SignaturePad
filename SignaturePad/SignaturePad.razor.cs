@@ -35,6 +35,9 @@ namespace SignaturePad
         [Parameter]
         public bool Disabled { get; set; }
 
+        [Parameter] public int CanvasHeight { get; set; } = 150;
+        [Parameter] public int CanvasWidth { get; set; } = 300;
+
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;
         private IJSObjectReference? jsModule;
