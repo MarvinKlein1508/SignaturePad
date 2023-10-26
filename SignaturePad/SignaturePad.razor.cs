@@ -35,8 +35,12 @@ namespace SignaturePad
         [Parameter]
         public bool Disabled { get; set; }
 
-        [Parameter] public int CanvasHeight { get; set; } = 150;
-        [Parameter] public int CanvasWidth { get; set; } = 300;
+
+        /// <summary>
+        /// Captures all the custom attributes that are not part of BlazorBootstrap component.
+        /// </summary>
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object> Attributes { get; set; } = new();
 
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;

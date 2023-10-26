@@ -1,7 +1,6 @@
 ﻿@inject Microsoft.JSInterop.IJSRuntime jsRuntime
 
-<canvas class="@Class @(Disabled ? "disabled" : string.Empty)" id="signature-@_id"
-        width="@CanvasWidth" height="@CanvasHeight">
+<canvas class="@Class @(Disabled ? "disabled" : string.Empty)" id="signature-@_id" @attributes="@Attributes">
     Get a better browser, bro.
 </canvas>
 
