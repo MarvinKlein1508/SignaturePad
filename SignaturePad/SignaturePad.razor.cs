@@ -65,11 +65,11 @@ namespace SignaturePad
 
             try
             {
-                Value = Convert.FromBase64String(base64);
+                _value = Convert.FromBase64String(base64);
             }
             catch (Exception)
             {
-                Value = Array.Empty<byte>();
+                _value = Array.Empty<byte>();
             }
 
 
