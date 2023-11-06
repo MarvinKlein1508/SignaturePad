@@ -7,7 +7,7 @@
 <h1>Disabled demo</h1>
 <p>You can trigger the disabled state by providing the Disabled attribute</p>
 <button type="button" class="btn btn-primary mb-1" @onclick="() => Disabled = !Disabled">Switch readonly mode</button>
-<SignaturePad @bind-Value="Input.Signature" Disabled="Disabled" />
+<SignaturePad @bind-Value="Input.Signature" Disabled="Disabled" style="width: 100%;" />
 
 @if (Input.Signature.Any())
 {

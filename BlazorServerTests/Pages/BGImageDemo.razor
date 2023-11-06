@@ -1,18 +1,18 @@
-﻿@page "/OptionsDemo"
+﻿@page "/BGImageDemo"
 @inject NavigationManager navigationManager
 @inject SignatureInMemoryService memoryService
+@using SignaturePad
+
 <PageTitle>Index</PageTitle>
 
-<h3>Custom Options demo</h3>
-<p>You can provide an instance of SignaturePadOptions to change the line width and style for the signature component.</p>
-
-<SignaturePad @bind-Value="Input.Signature" Options="_options" style="width:100%;" />
+<h1>SignaturePad Blazor Server Demo - Background Image</h1>
+<SignaturePad @bind-Value="Input.Signature" Options="MyOptions" width="560" height="560" style="width: 560px; height: 560px;" />
 
 
 @if (Input.Signature.Any())
 {
     <h2>Signature</h2>
-    <img src="@Input.SignatureAsBase64" />
+    <img src="@Input.SignatureAsBase64" class="d-block" />
     <button type="button" class="btn btn-primary" @onclick="SaveSignature">Save signature</button>
     <button type="button" class="btn btn-primary" @onclick="OpenSignature">Open signature</button>
 }
@@ -23,18 +23,15 @@
 }
 
 
-
 @code {
     public MyInput Input { get; set; } = new();
 
-    private SignaturePadOptions _options = new SignaturePadOptions
-    {
-        LineCap = LineCap.Round,
-        LineJoin = LineJoin.Round,
-        LineWidth = 20,
-        BackgroundColor = "rgb(255,255,255)"
-    };
-
+    public SignaturePadOptions MyOptions { get; set; } = new()
+        {
+            BackgroundImage = "/Pickup.png",
+            LineWidth = 3,
+            StrokeStyle = System.Drawing.Color.Red
+        };
 
     private void SaveSignature()
     {
@@ -52,3 +49,4 @@
         StateHasChanged();
     }
 }
+
