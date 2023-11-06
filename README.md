@@ -29,7 +29,7 @@ public class MyInput
 
 You can then use it wherever you want.
 ```
-    <SignaturePad @bind-Value="Input.Signature" />
+    <SignaturePad @bind-Value="Input.Signature" style="width: 100%" />
 ```
 
 The control provides you the image data as base64 `byte[]`
@@ -48,7 +48,7 @@ public class MyInput
 You can configure the SignaturePad by providing a `SignaturePadOptions` instance to the component. 
 
 ```csharp
-<SignaturePad @bind-Value="Input.Signature" Options="_options" />
+<SignaturePad @bind-Value="Input.Signature" Options="_options" style="width: 100%" />
 
 @code {
     public MyInput Input { get; set; } = new();
