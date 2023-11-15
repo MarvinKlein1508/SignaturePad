@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace BlazorServerTests
+namespace BlazorServerDemo
 {
     public class MyInput
     {

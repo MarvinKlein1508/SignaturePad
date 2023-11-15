@@ -1,8 +1,8 @@
-using BlazorServerTests.Services;
+using BlazorServerDemo.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
-namespace BlazorServerTests
+namespace BlazorServerDemo
 {
     public class Program
     {
