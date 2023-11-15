@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Demos.Core\Demos.Core.csproj" />
     <ProjectReference Include="..\..\SignaturePad\SignaturePad.csproj" />
-    <ProjectReference Include="..\BlazorSRRDemo.Client\BlazorSRRDemo.Client.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.0" />
   </ItemGroup>
 

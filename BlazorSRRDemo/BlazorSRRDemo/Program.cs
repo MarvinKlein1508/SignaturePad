@@ -1,5 +1,5 @@
-using BlazorSRRDemo.Client.Pages;
 using BlazorSRRDemo.Components;
+using Demos.Core.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents()
     .AddInteractiveWebAssemblyComponents();
+
+builder.Services.AddScoped<SignatureInMemoryService>();
 
 var app = builder.Build();
 
@@ -28,8 +30,6 @@ app.UseStaticFiles();
 app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
-    .AddInteractiveServerRenderMode()
-    .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Counter).Assembly);
+    .AddInteractiveServerRenderMode();
 
 app.Run();
