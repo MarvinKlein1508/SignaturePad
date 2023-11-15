@@ -1,7 +1,7 @@
-﻿@page "/OptionsDemo"
-@inject NavigationManager navigationManager
+﻿@inject NavigationManager navigationManager
 @inject SignatureInMemoryService memoryService
-<PageTitle>Index</PageTitle>
+
+<h3>OptionsDemo</h3>
 
 <h3>Custom Options demo</h3>
 <p>You can provide an instance of SignaturePadOptions to change the line width and style for the signature component.</p>
@@ -28,11 +28,11 @@
     public MyInput Input { get; set; } = new();
 
     private SignaturePadOptions _options = new SignaturePadOptions
-    {
-        LineCap = LineCap.Round,
-        LineJoin = LineJoin.Round,
-        LineWidth = 20
-    };
+        {
+            LineCap = LineCap.Round,
+            LineJoin = LineJoin.Round,
+            LineWidth = 20
+        };
 
 
     private void SaveSignature()

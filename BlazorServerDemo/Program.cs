@@ -1,4 +1,4 @@
-using BlazorServerDemo.Services;
+using Demos.Core.Services;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
 
