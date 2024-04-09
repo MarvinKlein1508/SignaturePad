@@ -39,7 +39,7 @@ To get the image, you'll need to convert to `byte[]` into a string. For example:
 ```csharp
 public class MyInput
 {
-    public byte[] Signature { get; set; }
+    public byte[] Signature { get; set; } = Array.Empty<byte>();
     public string SignatureAsBase64 => System.Text.Encoding.UTF8.GetString(Signature);
 }
 ```
