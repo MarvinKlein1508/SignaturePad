@@ -12,6 +12,7 @@ namespace SignaturePad
         public LineJoin LineJoin { get; set; } = LineJoin.Miter;
 
         public string? BackgroundColor { get; set; }
+        public string? BackgroundImage { get; set; }
 
         public string ToJSON()
         {
@@ -21,7 +22,7 @@ namespace SignaturePad
             json.lineCap = LineCap.ToString().ToLower();
             json.lineJoin = LineJoin.ToString().ToLower();
             json.backgroundColor = BackgroundColor;
-            
+            json.backgroundImage = BackgroundImage;
 
             return JsonSerializer.Serialize(json);
         }

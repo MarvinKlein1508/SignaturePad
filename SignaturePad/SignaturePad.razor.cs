@@ -35,6 +35,13 @@ namespace SignaturePad
         [Parameter]
         public bool Disabled { get; set; }
 
+
+        /// <summary>
+        /// Captures all the custom attributes that are not part of BlazorBootstrap component.
+        /// </summary>
+        [Parameter(CaptureUnmatchedValues = true)]
+        public Dictionary<string, object> Attributes { get; set; } = new();
+
         private string _id = Guid.NewGuid().ToString();
         private DotNetObjectReference<SignaturePad> _reference;
         private IJSObjectReference? jsModule;
@@ -58,11 +65,11 @@ namespace SignaturePad
 
             try
             {
-                Value = Convert.FromBase64String(base64);
+                _value = Convert.FromBase64String(base64);
             }
             catch (Exception)
             {
-                Value = Array.Empty<byte>();
+                _value = Array.Empty<byte>();
             }
 
 

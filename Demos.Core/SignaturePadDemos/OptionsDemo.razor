@@ -1,0 +1,53 @@
+﻿@inject NavigationManager navigationManager
+@inject SignatureInMemoryService memoryService
+
+<h3>OptionsDemo</h3>
+
+<h3>Custom Options demo</h3>
+<p>You can provide an instance of SignaturePadOptions to change the line width and style for the signature component.</p>
+
+<SignaturePad @bind-Value="Input.Signature" Options="_options" style="width: 100%;" />
+
+
+@if (Input.Signature.Any())
+{
+    <h2>Signature</h2>
+    <img src="@Input.SignatureAsBase64" />
+    <button type="button" class="btn btn-primary" @onclick="SaveSignature">Save signature</button>
+    <button type="button" class="btn btn-primary" @onclick="OpenSignature">Open signature</button>
+}
+
+@if (memoryService.Signature.Any())
+{
+    <button type="button" class="btn btn-primary ms-1" @onclick="ReadSignature">Read signature</button>
+}
+
+
+
+@code {
+    public MyInput Input { get; set; } = new();
+
+    private SignaturePadOptions _options = new SignaturePadOptions
+        {
+            LineCap = LineCap.Round,
+            LineJoin = LineJoin.Round,
+            LineWidth = 20
+        };
+
+
+    private void SaveSignature()
+    {
+        memoryService.Signature = Input.Signature;
+    }
+
+    private void OpenSignature()
+    {
+        navigationManager.NavigateTo(Input.SignatureAsBase64);
+    }
+
+    private void ReadSignature()
+    {
+        Input.Signature = memoryService.Signature;
+        StateHasChanged();
+    }
+}
