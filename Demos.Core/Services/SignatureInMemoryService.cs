@@ -2,6 +2,6 @@
 {
     public class SignatureInMemoryService
     {
-        public byte[] Signature { get; set; } = Array.Empty<byte>();
+        public byte[] Signature { get; set; } = [];
     }
 }

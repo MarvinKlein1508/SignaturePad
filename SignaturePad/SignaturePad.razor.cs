@@ -13,7 +13,7 @@ namespace SignaturePad
             get => _value;
             set
             {
-                if(value == _value) return;
+                if (value == _value) return;
 
                 _value = value;
                 UpdateImage();
@@ -21,10 +21,10 @@ namespace SignaturePad
         }
         [Parameter]
         public EventCallback<byte[]> ValueChanged { get; set; }
-        [Parameter] 
+        [Parameter]
         public SignaturePadOptions Options { get; set; } = new SignaturePadOptions();
 
-        [Parameter] 
+        [Parameter]
         public bool ShowClearButton { get; set; } = true;
         [Parameter]
         public string ClearButtonClass { get; set; } = "btn btn-default";
@@ -40,13 +40,12 @@ namespace SignaturePad
         /// Captures all the custom attributes that are not part of BlazorBootstrap component.
         /// </summary>
         [Parameter(CaptureUnmatchedValues = true)]
-        public Dictionary<string, object> Attributes { get; set; } = new();
+        public Dictionary<string, object> Attributes { get; set; } = [];
 
-        private string _id = Guid.NewGuid().ToString();
-        private DotNetObjectReference<SignaturePad> _reference;
-        private IJSObjectReference? jsModule;
-        private bool _rendered = false;
-        private byte[] _value = Array.Empty<byte>();
+        private readonly string _id = Guid.NewGuid().ToString();
+        private readonly DotNetObjectReference<SignaturePad> _reference;
+        private IJSObjectReference? _jsModule;
+        private byte[] _value = [];
 
         public SignaturePad()
         {
@@ -56,8 +55,8 @@ namespace SignaturePad
         [JSInvokable]
         public async Task SignatureDataChangedAsync()
         {
-            using MemoryStream memoryStream = new MemoryStream();
-            var dataReference = await jsModule.InvokeAsync<IJSStreamReference>("getBase64", _id);
+            using MemoryStream memoryStream = new();
+            var dataReference = await _jsModule.InvokeAsync<IJSStreamReference>("getBase64", _id);
             using var dataReferenceStream = await dataReference.OpenReadStreamAsync(maxAllowedSize: 10_000_000);
             await dataReferenceStream.CopyToAsync(memoryStream);
 
@@ -69,7 +68,7 @@ namespace SignaturePad
             }
             catch (Exception)
             {
-                _value = Array.Empty<byte>();
+                _value = [];
             }
 
 
@@ -81,7 +80,7 @@ namespace SignaturePad
         {
             if (firstRender)
             {
-                jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js");
+                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js");
                 await Setup();
             }
 
@@ -90,51 +89,48 @@ namespace SignaturePad
 
         protected override async Task OnParametersSetAsync()
         {
-            if (_rendered)
-            {
-                await Update();
-                await UpdateImage();
-            }
+            await Update();
+            await UpdateImage();
         }
 
-        private string ByteToData(byte[] data)
+        private static string ByteToData(byte[] data)
         {
             return $"{Encoding.UTF8.GetString(data)}";
         }
 
         private async Task Setup()
         {
-            if (jsModule is not null)
+            if (_jsModule is not null)
             {
-                await jsModule.InvokeVoidAsync("setup", new object[] { _id, _reference, Options.ToJSON(), Value is null ? String.Empty : ByteToData(Value) });
+                await _jsModule.InvokeVoidAsync("setup", [_id, _reference, Options.ToJSON(), Value is null ? string.Empty : ByteToData(Value)]);
             }
         }
 
         private async Task Update()
         {
-            if (jsModule is not null)
+            if (_jsModule is not null)
             {
-                await jsModule.InvokeVoidAsync("update", new object[] { _id, Options.ToJSON() });
+                await _jsModule.InvokeVoidAsync("update", [_id, Options.ToJSON()]);
             }
         }
 
         [JSInvokable]
         public async Task UpdateImage()
         {
-            if (jsModule is not null)
+            if (_jsModule is not null)
             {
-                await jsModule.InvokeVoidAsync("updateImage", new object[] { _id, Value is null ? String.Empty : ByteToData(Value) });
+                await _jsModule.InvokeVoidAsync("updateImage", [_id, Value is null ? string.Empty : ByteToData(Value)]);
             }
         }
 
         public async ValueTask DisposeAsync()
         {
-            if (jsModule is not null)
+            if (_jsModule is not null)
             {
                 try
                 {
-                    await jsModule.InvokeVoidAsync("destroy", new object[] { _id });
-                    await jsModule.DisposeAsync();
+                    await _jsModule.InvokeVoidAsync("destroy", [_id]);
+                    await _jsModule.DisposeAsync();
                 }
                 catch (TaskCanceledException)
                 {
@@ -148,10 +144,10 @@ namespace SignaturePad
 
         public async Task Clear()
         {
-            if (jsModule is not null)
+            if (_jsModule is not null)
             {
-                await jsModule.InvokeVoidAsync("clear", new object[] { _id, Value is null ? String.Empty : ByteToData(Value) });
-                Value = Array.Empty<byte>();
+                await _jsModule.InvokeVoidAsync("clear", [_id, Value is null ? String.Empty : ByteToData(Value)]);
+                Value = [];
                 await ValueChanged.InvokeAsync(Value);
                 await UpdateImage();
             }
