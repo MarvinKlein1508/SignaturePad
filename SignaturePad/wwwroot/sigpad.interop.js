@@ -1,4 +1,4 @@
-﻿import Sigpad from "./sigpad.min.js"
+﻿import Sigpad from "./sigpad.min.js?ver=8.1.0"
 var dotNetHelper;
 
 export function setup(id, reference, options, image) {

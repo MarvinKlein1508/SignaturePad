@@ -80,7 +80,7 @@ namespace SignaturePad
         {
             if (firstRender)
             {
-                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js");
+                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js?ver=8.1.0");
                 await Setup();
             }
 
