@@ -31,9 +31,8 @@ window.onresize = function () {
 
 export function destroy(id) {
     var identifier = "signature-" + id;
-    var element = document.getElementById(identifier);
 
-    var sigpad = Sigpad.getInstance(element);
+    var sigpad = Sigpad.getInstance(identifier);
     if (sigpad != null) {
         sigpad.destroy();
     }
@@ -50,18 +49,16 @@ export function update(id, options) {
 
 export function updateImage(id, image) {
     var identifier = "signature-" + id;
-    var element = document.getElementById(identifier);
 
-    var sigpad = Sigpad.getInstance(element);
+    var sigpad = Sigpad.getInstance(identifier);
     if (sigpad != null) {
         sigpad.setImage(image);
     }
 }
 export function clear(id) {
     var identifier = "signature-" + id;
-    var element = document.getElementById(identifier);
 
-    var sigpad = Sigpad.getInstance(element);
+    var sigpad = Sigpad.getInstance(identifier);
     if (sigpad != null) {
         sigpad.clear();
     }
@@ -69,9 +66,8 @@ export function clear(id) {
 
 export function getBase64(id) {
     var identifier = "signature-" + id;
-    var element = document.getElementById(identifier);
 
-    var sigpad = Sigpad.getInstance(element);
+    var sigpad = Sigpad.getInstance(identifier);
 
     var base64 = sigpad.getImage();
 
