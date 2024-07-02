@@ -16,4 +16,10 @@
     <ProjectReference Include="..\Demos.Core\Demos.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Pages\ExistingSignature.razor">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+    </Content>
+  </ItemGroup>
+
 </Project>
