@@ -8,17 +8,8 @@ namespace SignaturePad
     public partial class SignaturePad
     {
         [Parameter]
-        public byte[] Value
-        {
-            get => _value;
-            set
-            {
-                if (value == _value) return;
-
-                _value = value;
-                UpdateImage();
-            }
-        }
+        public byte[] Value { get; set; } = [];
+        
         [Parameter]
         public EventCallback<byte[]> ValueChanged { get; set; }
         [Parameter]
@@ -36,6 +27,7 @@ namespace SignaturePad
         public bool Disabled { get; set; }
 
 
+
         /// <summary>
         /// Captures all the custom attributes that are not part of BlazorBootstrap component.
         /// </summary>
@@ -45,8 +37,8 @@ namespace SignaturePad
         private readonly string _id = Guid.NewGuid().ToString();
         private readonly DotNetObjectReference<SignaturePad> _reference;
         private IJSObjectReference? _jsModule;
-        private byte[] _value = [];
-
+      
+        
         public SignaturePad()
         {
             _reference = DotNetObjectReference.Create(this);
@@ -56,7 +48,7 @@ namespace SignaturePad
         public async Task SignatureDataChangedAsync()
         {
             using MemoryStream memoryStream = new();
-            var dataReference = await _jsModule.InvokeAsync<IJSStreamReference>("getBase64", _id);
+            var dataReference = await _jsModule!.InvokeAsync<IJSStreamReference>("getBase64", _id);
             using var dataReferenceStream = await dataReference.OpenReadStreamAsync(maxAllowedSize: 10_000_000);
             await dataReferenceStream.CopyToAsync(memoryStream);
 
@@ -64,11 +56,11 @@ namespace SignaturePad
 
             try
             {
-                _value = Convert.FromBase64String(base64);
+                Value = Convert.FromBase64String(base64);
             }
             catch (Exception)
             {
-                _value = [];
+                Value = [];
             }
 
 
@@ -80,8 +72,10 @@ namespace SignaturePad
         {
             if (firstRender)
             {
-                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js?ver=8.1.0");
+                _jsModule = await jsRuntime.InvokeAsync<IJSObjectReference>("import", "./_content/Blazor.SignaturePad/sigpad.interop.js?ver=8.1.2");
                 await Setup();
+                await Update();
+                await UpdateImage();
             }
 
             await base.OnAfterRenderAsync(firstRender);
