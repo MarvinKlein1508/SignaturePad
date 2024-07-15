@@ -15,7 +15,7 @@ Or via the Visual Studio package manger.
 
 ## Basic usage
 Start by adding the following using statement to your root `_Imports.razor`.
-```
+```asp
 @using SignaturePad
 ```
 
@@ -47,7 +47,7 @@ public class MyInput
 ## Providing options
 You can configure the SignaturePad by providing a `SignaturePadOptions` instance to the component. 
 
-```csharp
+```asp
 <SignaturePad @bind-Value="Input.Signature" Options="_options" style="width: 100%" />
 
 @code {
