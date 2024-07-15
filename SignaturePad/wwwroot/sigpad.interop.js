@@ -7,6 +7,7 @@ export function setup(id, reference, options, image) {
     var element = document.getElementById(identifier);
 
     element.addEventListener("sigpad.finish", function (e) {
+        updateImage(id, e.detail)
         reference.invokeMethodAsync('SignatureDataChangedAsync');
     });
 
