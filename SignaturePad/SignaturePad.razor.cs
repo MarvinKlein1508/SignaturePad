@@ -9,6 +9,8 @@ namespace SignaturePad
     {
         [Parameter]
         public byte[] Value { get; set; } = [];
+
+        private byte[]? _prevValue = null;
         
         [Parameter]
         public EventCallback<byte[]> ValueChanged { get; set; }
@@ -57,6 +59,7 @@ namespace SignaturePad
             try
             {
                 Value = Convert.FromBase64String(base64);
+                _prevValue = Value;
             }
             catch (Exception)
             {
@@ -111,7 +114,7 @@ namespace SignaturePad
         [JSInvokable]
         public async Task UpdateImage()
         {
-            if (_jsModule is not null)
+            if (_jsModule is not null  && !(_prevValue?.SequenceEqual(Value) ?? false))
             {
                 await _jsModule.InvokeVoidAsync("updateImage", [_id, Value is null ? string.Empty : ByteToData(Value)]);
             }
@@ -141,6 +144,7 @@ namespace SignaturePad
             if (_jsModule is not null)
             {
                 await _jsModule.InvokeVoidAsync("clear", [_id, Value is null ? String.Empty : ByteToData(Value)]);
+                _prevValue = null;
                 Value = [];
                 await ValueChanged.InvokeAsync(Value);
                 await UpdateImage();
