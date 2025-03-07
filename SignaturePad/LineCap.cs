@@ -1,9 +1,8 @@
-﻿namespace SignaturePad
+﻿namespace SigPad;
+
+public enum LineCap
 {
-    public enum LineCap
-    {
-        Butt,
-        Round,
-        Square
-    }
+    Butt,
+    Round,
+    Square
 }

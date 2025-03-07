@@ -1,9 +1,7 @@
-﻿namespace SignaturePad
+﻿namespace SigPad;
+public enum LineJoin
 {
-    public enum LineJoin
-    {
-        Miter,
-        Round,
-        Bevel
-    }
+    Miter,
+    Round,
+    Bevel
 }
