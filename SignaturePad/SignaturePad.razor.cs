@@ -27,7 +27,8 @@ public partial class SignaturePad
     public string ClearButtonText { get; set; } = "Clear Signature";
     [Parameter]
     public bool Disabled { get; set; }
-
+    [Parameter]
+    public RenderFragment<SignaturePad>? ClearButtonTemplate { get; set; }
 
 
     /// <summary>
