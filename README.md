@@ -16,7 +16,7 @@ Or via the Visual Studio package manger.
 ## Basic usage
 Start by adding the following using statement to your root `_Imports.razor`.
 ```asp
-@using SignaturePad
+@using SigPad
 ```
 
 Next you should define a property in your class. For example:

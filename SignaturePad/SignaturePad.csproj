@@ -4,9 +4,9 @@
 		<TargetFrameworks>net8.0;net9.0</TargetFrameworks>
 		<Nullable>enable</Nullable>
 		<ImplicitUsings>enable</ImplicitUsings>
-		<Version>9.0.0</Version>
+		<Version>9.0.2</Version>
 		<Description>A simple to use blazor component to draw a signature.</Description>
-		<Copyright>2023 - 2024</Copyright>
+		<Copyright>2023 - 2025</Copyright>
 		<RepositoryUrl>https://github.com/MarvinKlein1508/SignaturePad</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>unterschrift, signature</PackageTags>
