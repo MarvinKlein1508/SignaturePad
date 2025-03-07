@@ -1,10 +1,10 @@
 {
   "mainAssemblyName": "BlazorWebAssemblyDemo",
   "resources": {
-    "hash": "sha256-WbhAtzmkqi+GtBXsvv+c9oZrYP6+Ak2HByA1lHTKDM8=",
+    "hash": "sha256-w8QYsb/DR6Qfr88joObq9IKXepy4Shci7wjpkXMjkP8=",
     "fingerprinting": {
-      "BlazorWebAssemblyDemo.vcashonvbo.wasm": "BlazorWebAssemblyDemo.wasm",
-      "Demos.Core.e8b7qankcc.wasm": "Demos.Core.wasm",
+      "BlazorWebAssemblyDemo.l7jqhwpba8.wasm": "BlazorWebAssemblyDemo.wasm",
+      "Demos.Core.vdt8zxyd4p.wasm": "Demos.Core.wasm",
       "Microsoft.AspNetCore.Components.4vt1f6ymae.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.1c4v2gp718.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -20,7 +20,7 @@
       "Microsoft.Extensions.Primitives.4dxofymb0o.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.uro3xzyqni.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.p386u0jty9.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "SignaturePad.takvvwe9b1.wasm": "SignaturePad.wasm",
+      "SignaturePad.ukqvj93tej.wasm": "SignaturePad.wasm",
       "System.Collections.Concurrent.hsmjajo9fw.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.ouzplzmqt8.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.q4yar8vlre.wasm": "System.Collections.wasm",
@@ -71,8 +71,8 @@
       "System.Runtime.InteropServices.JavaScript.2qzse51b5r.wasm": "sha256-2nWN1zwezK82JRmcnLLcKzdroP7qZRNl6DW0r2jhKe4="
     },
     "assembly": {
-      "BlazorWebAssemblyDemo.vcashonvbo.wasm": "sha256-b2QWnOicxk9g9IbGVv1VUJciFOYLxot1HdYbbl1pGnM=",
-      "Demos.Core.e8b7qankcc.wasm": "sha256-YpkSDYCkXlniJp4f2QNaqkutp3fI108lW65+SKxvGug=",
+      "BlazorWebAssemblyDemo.l7jqhwpba8.wasm": "sha256-P5uFzCHwpPmbYV0fYjXnWc5nISG0ZA2mkDLko6BoBLg=",
+      "Demos.Core.vdt8zxyd4p.wasm": "sha256-w82XfyS31vt80WsEXF7B/zYLJifepm+L50KNUNfxCR8=",
       "Microsoft.AspNetCore.Components.4vt1f6ymae.wasm": "sha256-cDQ9BwqWHnMEtk/YK8L7AK5ptKrG/nrEJUVwXyNOY0I=",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "sha256-0fT5DLMa1voamFmX5/f/aY8oct7a5CLEOHu2Tdn6oCA=",
       "Microsoft.AspNetCore.Components.WebAssembly.1c4v2gp718.wasm": "sha256-TwZvNs2ljU6yGwDh8c1V5SOUIuBrERRevLCGx8cJllY=",
@@ -88,7 +88,7 @@
       "Microsoft.Extensions.Primitives.4dxofymb0o.wasm": "sha256-GOr7jc/eCieZrQYoXRn79eLSsesIfFB55wQZIVTSNIY=",
       "Microsoft.JSInterop.uro3xzyqni.wasm": "sha256-Km3WQ8vdKuEUPIuR0PalzegoUpYMgwDdVdvhF+2Z1ts=",
       "Microsoft.JSInterop.WebAssembly.p386u0jty9.wasm": "sha256-hbzWuXrlepIqY/y+nQ2ZAFer2/njy1dc+Y4LUaAaL5E=",
-      "SignaturePad.takvvwe9b1.wasm": "sha256-e2gY+Zci11T4I8i/wcHfh2AnSR5nmo6tdfHYr4j09rE=",
+      "SignaturePad.ukqvj93tej.wasm": "sha256-skBeltKWH5fpYGQu911Opa/g31gARfh/fU9ulh1TOuQ=",
       "System.Collections.Concurrent.hsmjajo9fw.wasm": "sha256-ITARbVistD8YETxX4DtTUovBUNej2hVaexLiO9Fimqc=",
       "System.Collections.Immutable.ouzplzmqt8.wasm": "sha256-wAL8MrgK9Q0DGs/PLBxBdBFa2bKhA40ZW6kvSyi3rUs=",
       "System.Collections.q4yar8vlre.wasm": "sha256-ShbCBnQh8T0RVR8qdoA466ihefaE7GKRxbLriMmcv3E=",
