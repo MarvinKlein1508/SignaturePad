@@ -130,11 +130,11 @@ public partial class SignaturePad
                 await _jsModule.InvokeVoidAsync("destroy", [_id]);
                 await _jsModule.DisposeAsync();
             }
-            catch (TaskCanceledException)
+            catch (Exception ex) when (ex is JSDisconnectedException ||
+                                  ex is OperationCanceledException)
             {
-            }
-            catch (JSDisconnectedException)
-            {
+                // The JSRuntime side may routinely be gone already if the reason we're disposing is that
+                // the client disconnected. This is not an error.
             }
         }
 
