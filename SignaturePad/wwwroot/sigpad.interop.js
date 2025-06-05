@@ -42,10 +42,11 @@ export function destroy(id) {
 export function update(id, options) {
     var identifier = "signature-" + id;
     var element = document.getElementById(identifier);
-
-    var sigpad = Sigpad.getOrCreateInstance(element, JSON.parse(options));
-    sigpad._config = sigpad._getConfig(JSON.parse(options));
-    sigpad._applyOptions();
+	if (element != null){
+		var sigpad = Sigpad.getOrCreateInstance(element, JSON.parse(options));
+		sigpad._config = sigpad._getConfig(JSON.parse(options));
+		sigpad._applyOptions();
+	}
 }
 
 export function updateImage(id, image) {
