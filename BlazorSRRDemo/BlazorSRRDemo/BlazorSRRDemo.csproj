@@ -9,7 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Demos.Core\Demos.Core.csproj" />
     <ProjectReference Include="..\..\SignaturePad\SignaturePad.csproj" />
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
