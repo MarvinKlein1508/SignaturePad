@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorWebAssemblyDemo",
   "resources": {
-    "hash": "sha256-5eo4Jr7jpxhhbIf0BEV4K49DlHedqMyHhkjkQAP7iIU=",
+    "hash": "sha256-kpFzgfGs294E2KhEmLbEjEE7gKzvLAkJGkSSCsDv6gw=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.pucnnx46qe.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.vn7cjv3pw5.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -41,9 +41,9 @@
       "System.Text.Json.8e7edqqo4f.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.igwlpyjruz.wasm": "System.Text.RegularExpressions.wasm",
       "System.Private.CoreLib.qcs1kldlwy.wasm": "System.Private.CoreLib.wasm",
-      "Demos.Core.j7b76bw9z8.wasm": "Demos.Core.wasm",
-      "SignaturePad.165m5pcqjg.wasm": "SignaturePad.wasm",
-      "BlazorWebAssemblyDemo.026r4bjnyx.wasm": "BlazorWebAssemblyDemo.wasm",
+      "Demos.Core.sistx120gm.wasm": "Demos.Core.wasm",
+      "SignaturePad.0zpxbzhm15.wasm": "SignaturePad.wasm",
+      "BlazorWebAssemblyDemo.jnak2zorb0.wasm": "BlazorWebAssemblyDemo.wasm",
       "dotnet.native.ffj4va6u6z.js": "dotnet.native.js",
       "dotnet.native.3ciyg4e71o.wasm": "dotnet.native.wasm",
       "dotnet.js": "dotnet.js",
@@ -107,9 +107,9 @@
       "System.Text.Encodings.Web.j8jbnca1on.wasm": "sha256-3cJRUrFjSoiaGlI3OmHNndawtN8Y5lEgLHYI76jlAvo=",
       "System.Text.Json.8e7edqqo4f.wasm": "sha256-8JEJOZgA1MN7D6aQSOsJ+s/vxHzG2VfoVIpN88XfHLU=",
       "System.Text.RegularExpressions.igwlpyjruz.wasm": "sha256-kgijcCmugr86z1OFMm2iMISoVx01LfmViyULM2HC2lw=",
-      "Demos.Core.j7b76bw9z8.wasm": "sha256-gbnm0XP51Zaz3Azl/aCHGLh/Rdh5AOTEbjumy0W0YhM=",
-      "SignaturePad.165m5pcqjg.wasm": "sha256-V9Or++ibKxjIivJ9Xaf59nOsNJpwnVIpBD+DEv0ABAU=",
-      "BlazorWebAssemblyDemo.026r4bjnyx.wasm": "sha256-aNcak4+8jW1hkWXKRPGFnSAwFCFZnwbeuexHmtRsFBE="
+      "Demos.Core.sistx120gm.wasm": "sha256-XEX8O4PFn7zm3w1oZFlntYlSSgc2CrM3DZI/NiI5iHk=",
+      "SignaturePad.0zpxbzhm15.wasm": "sha256-RBcr0D94fNWQolbM9+u7c6ZZ5aG6XOBQZOI10FC2edo=",
+      "BlazorWebAssemblyDemo.jnak2zorb0.wasm": "sha256-72Cr9KAV4uN4o5ocfTOE24GuHvx3NaGjfz/wYgmJuO8="
     }
   },
   "cacheBootResources": true,
