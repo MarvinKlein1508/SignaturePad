@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/examples/">
+    <Project Path="examples/BlazorServerDemo/BlazorServerDemo.csproj" />
+    <Project Path="examples/BlazorSRRDemo/BlazorSRRDemo/BlazorSRRDemo.csproj" />
+    <Project Path="examples/BlazorWebAssemblyDemo/BlazorWebAssemblyDemo.csproj" />
+    <Project Path="examples/Demos.Core/Demos.Core.csproj" />
+    <Project Path="examples/MudBlazorDemo/MudBlazorDemo.csproj" />
+  </Folder>
+  <Folder Name="/Ressources/">
+    <File Path="LICENSE" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="SignaturePad/SignaturePad.csproj" />
+</Solution>
